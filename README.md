@@ -12,7 +12,6 @@ http://localhost:8080
 
 1️⃣ Clone the repository
 git clone https://github.com/MathanRajh/Blog-Post-Refresh-Agent-frontend.git
-cd Blog-Post-Refresh-Agent-frontend
 
 2️⃣ Install dependencies
 npm install lucide-react
