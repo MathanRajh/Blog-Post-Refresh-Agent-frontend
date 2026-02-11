@@ -166,7 +166,7 @@ export default function ConfirmPage() {
 
           <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
             <div className="max-h-[400px] overflow-y-auto divide-y divide-slate-100 custom-scrollbar">
-              {auditData.link_reviews?.map((link: any, i: number) => {
+              {auditData.link_reviews?.filter((l: any) => l.status !== 'valid').map((link: any, i: number) => {
                 const isKept = keptLinkUrls.has(link.url);
                 return (
                   <div
@@ -211,8 +211,12 @@ export default function ConfirmPage() {
                   </div>
                 );
               })}
-              {(!auditData.link_reviews || auditData.link_reviews.length === 0) && (
-                <div className="p-8 text-center text-slate-400 italic">No links found in content.</div>
+              {(!auditData.link_reviews || auditData.link_reviews.filter((l: any) => l.status !== 'valid').length === 0) && (
+                <div className="p-8 text-center text-slate-400 italic">
+                  {auditData.link_reviews?.length > 0
+                    ? "All links are valid and will be kept automatically."
+                    : "No links found in content."}
+                </div>
               )}
             </div>
           </div>

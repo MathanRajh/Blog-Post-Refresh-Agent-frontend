@@ -1,23 +1,38 @@
-Verify:
+## Prerequisites
+- Node.js 18+ (LTS recommended)
+- npm
+
+Verify installation:
+```bash
 node -v
 npm -v
+```
 
-How to Run (Frontend Only)
+## Installation
 
-This frontend can be started independently.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/MathanRajh/Blog-Post-Refresh-Agent-frontend.git
+    cd Blog-Post-Refresh-Agent-frontend
+    ```
 
-⚠️ API actions expect a backend running on
-http://localhost:8080
-(as hard-coded in the frontend source).
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-1️⃣ Clone the repository:
-git clone https://github.com/MathanRajh/Blog-Post-Refresh-Agent-frontend.git
+3.  **Configuration:**
+    Create a `.env.local` file in the root directory if it doesn't exist:
+    ```env
+    NEXT_PUBLIC_API_URL=http://localhost:8000
+    ```
 
-2️⃣ Install dependencies:
-npm install lucide-react
+## Running the Application
 
-3️⃣ Start the development server:
+Start the development server:
+
+```bash
 npm run dev
+```
 
-4️⃣ Open in browser
-http://localhost:3000
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
