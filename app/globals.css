@@ -21,14 +21,18 @@ body {
 /* === THE LEGEND STYLES === */
 
 /* 1. Valid Links: Green, Bold */
-a.valid-link {
-  color: #16a34a; /* Green-600 */
-  font-weight: 700;
-  text-decoration: none;
+a.valid-link,
+.prose a.valid-link,
+.blog-content a.valid-link {
+  color: #16a34a !important; /* Green-600 */
+  font-weight: 700 !important;
+  text-decoration: none !important;
   border-bottom: 2px solid #16a34a;
   transition: all 0.2s;
 }
-a.valid-link:hover {
+a.valid-link:hover,
+.prose a.valid-link:hover,
+.blog-content a.valid-link:hover {
   background-color: #dcfce7; /* Green-100 */
 }
 a.valid-link::after {
@@ -38,12 +42,15 @@ a.valid-link::after {
 }
 
 /* 2. Invalid Links: Red, Strikethrough */
-span.invalid-link {
-  color: #dc2626; /* Red-600 */
-  text-decoration: line-through;
+span.invalid-link,
+.prose span.invalid-link,
+.blog-content span.invalid-link {
+  color: #dc2626 !important; /* Red-600 */
+  text-decoration: line-through !important;
   opacity: 0.6;
   margin: 0 4px;
   font-size: 0.9em;
+  font-weight: 700;
 }
 
 /* 3. Merged Sections: Blue Border */
